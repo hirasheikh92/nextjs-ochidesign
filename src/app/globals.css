@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  @font-face {
+    font-family: "Founder";
+    src: url(../fonts/FoundersGrotesk-Semibold.woff2) format("woff2");
+    font-style: normal;
+    font-weight: normal;
   }
-}
+  @font-face {
+    font-family: "Neue";
+    src: url(../fonts/NeueMontreal-Regular.woff2) format("woff2");
+    font-style: normal;
+    font-weight: light;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    @apply text-black font-neue;
+  }
+
+  body {
+    @apply text-black bg-[#F1F1F1];
+  }
+
+  li a {
+    @apply font-neue text-black;
+  }
 }
