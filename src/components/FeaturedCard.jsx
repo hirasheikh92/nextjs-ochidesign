@@ -60,15 +60,21 @@ const FeaturedCard = () => {
     <>
       <div className=" grid grid-cols-2 gap-4">
         {data.map((item, index) => (
-          <div key={index} className="cards w-full flex gap-10 mt-10 ">
+          <div key={index} className="cards relative w-full flex gap-10 mt-10 ">
             {/* Title */}
-            <div className="card-container relative  w-full h-[75vh]">
-              <div className="flex flex-col gap-4 px-10 py-10 items-start ">
+            <div className="card-container group   w-full h-[75vh]">
+              <div className=" flex flex-col group gap-4 px-10 py-10 items-start ">
                 <div className=" text-sm uppercase font-Neue flex items-center">
                   <span className="w-3 h-3 flex-shrink-0 rounded-full bg-current mr-8"></span>
                   <span>{item.title}</span>
+                  <h2 className="absolute top-1/2 left-1/2 right-1/2 translate-x-1/2 translate-y-1/2 text opacity-0 group-hover:opacity-100">
+                    {" "}
+                    {item.title.split(" ").map((word, index) => (
+                      <span key={index}>{word} </span>
+                    ))}
+                  </h2>
                 </div>
-
+                    
                 {/* Image Card */}
                 <div className="w-full h-full overflow-hidden">
                   <Image

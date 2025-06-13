@@ -35,4 +35,7 @@
   li a {
     @apply font-neue text-black;
   }
+  .heading-large{
+    @apply text-lg font-founder uppercase pt-[1vw] font-bold text-[9vw] leading-[7vw] tracking-[-0.02em];
+  }
 }

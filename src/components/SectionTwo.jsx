@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const SectionTwo = () => {
@@ -29,12 +30,12 @@ const SectionTwo = () => {
               Start the project
             </a>
             {/* Icon Button */}
-            <a
-              href="http://ochi.design/contact/"
+            <Link
+              href="/"
               className="border-[1px] border-zinc-800 rounded-full w-12 h-12 flex items-center justify-center text-black hover:bg-zinc-800 hover:text-white transition"
             >
               <FiArrowUpRight size={20} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

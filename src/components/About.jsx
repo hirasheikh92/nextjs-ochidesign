@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
+import Button from "./Button";
 
 const About = () => {
   return (
@@ -76,17 +78,16 @@ const About = () => {
           <h2 className="md:text-5xl text-4xl  whitespace-nowrap">
             Our approach:
           </h2>
-          <button className="px-6 py-4 flex items-center justify-between gap-8 bg-zinc-900 uppercase rounded-full text-white mt-10">
-            Read More
-            <div className="w-3 h-3 bg-zinc-100 rounded-full"></div>
-          </button>
+         <div className="mt-5">
+         <Button title={"Read More"}/>
+         </div>
         </div>
         <div className="w-1/2 h-[70vh] zoom-hover rounded-3xl overflow-hidden relative">
           <picture className="w-full h-full">
             <Image
               className="bg-gray-200 w-full h-full object-cover  rounded-3xl entered loaded"
               src="/assets/about.jpg"
-            fill
+              fill
             />
           </picture>
         </div>
